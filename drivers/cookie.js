@@ -1,6 +1,6 @@
-const Promise = require('promise')
-const merge = require('lodash.merge')
-const cookies = require('cookies-js')
+var Promise = require('promise')
+var merge = require('lodash.merge')
+var cookies = require('cookies-js')
 
 var CookieDriver = function() {
     this.isSupported = false

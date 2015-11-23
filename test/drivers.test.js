@@ -1,6 +1,6 @@
-const should = require('should')
+var should = require('should')
 
-const randomName = 'db1'
+var randomName = 'db1'
 
 function testDriver(driverInstance) {
     var keyString = 'testString'
@@ -263,19 +263,19 @@ function testDriver(driverInstance) {
 
 describe('mirrorstore-drivers', function () {
     describe('localstorage', function () {
-        const driver = require('../drivers/localstorage.js')
+        var driver = require('../drivers/localstorage.js')
         testDriver(driver(randomName))
     })
     describe('websql', function () {
-        const driver = require('../drivers/websql.js')
+        var driver = require('../drivers/websql.js')
         testDriver(driver(randomName))
     })
 /*    xdescribe('indexeddb (skipped, unsupported on phantomjs)', function () {
-        const driver = require('../drivers/indexeddb.js')
+        var driver = require('../drivers/indexeddb.js')
         testDriver(driver(randomName))
     }) */
     describe('cookie', function () {
-        const driver = require('../drivers/cookie.js')
+        var driver = require('../drivers/cookie.js')
         testDriver(driver(randomName), true)
     })
 })

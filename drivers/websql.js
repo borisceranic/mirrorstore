@@ -1,6 +1,6 @@
-const adapter = require('../adapters/localforage.js')
-const localforage = require('localforage')
-const driver = localforage.WEBSQL
+var adapter = require('../adapters/localforage.js')
+var localforage = require('localforage')
+var driver = localforage.WEBSQL
 
 module.exports = function(name) {
     return new adapter(driver, name)

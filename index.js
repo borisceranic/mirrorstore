@@ -1,7 +1,7 @@
-const Promise = require('promise')
-const uniq = require('lodash.uniq')
+var Promise = require('promise')
+var uniq = require('lodash.uniq')
 
-const drivers = [
+var drivers = [
     {
         name: 'localstorage',
         module: require('./drivers/localstorage.js'),

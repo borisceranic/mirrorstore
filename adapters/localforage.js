@@ -1,4 +1,4 @@
-const localforage = require('localforage')
+var localforage = require('localforage')
 
 var Adapter = function(driver, name) {
     this.driver = driver

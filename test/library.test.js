@@ -1,37 +1,37 @@
-const should = require('should')
-const mirrorStore = require('../index.js')
+var should = require('should')
+var mirrorStore = require('../index.js')
 
 describe('mirrorstore-library', function () {
 
-    const storeName = 'Fancy Store'
+    var storeName = 'Fancy Store'
 
-    const keyString = 'testString'
-    const valueString = 'testStringValue123'
+    var keyString = 'testString'
+    var valueString = 'testStringValue123'
 
-    const keyNum = 'testInt'
-    const valueNum = 123598710687
+    var keyNum = 'testInt'
+    var valueNum = 123598710687
 
-    const keyBool = 'testBool'
-    const valueBool = true
+    var keyBool = 'testBool'
+    var valueBool = true
 
-    const keyArray = 'testArray'
-    const valueArray = [1, 2, 3, 'foo', 'bar', 'baz']
+    var keyArray = 'testArray'
+    var valueArray = [1, 2, 3, 'foo', 'bar', 'baz']
 
-    const keyObj = 'testObj'
-    const valueObj = {a: 1, b: 2, c: 'foo', d: [1, 2, 3, 'bar', 'baz']}
+    var keyObj = 'testObj'
+    var valueObj = {a: 1, b: 2, c: 'foo', d: [1, 2, 3, 'bar', 'baz']}
 
     it('should be able to load', function() {
-        const ms = new mirrorStore(storeName)
+        var ms = new mirrorStore(storeName)
     })
     it('should have a list of backend storage mechanisms', function() {
-        const ms = new mirrorStore(storeName);
-        const supports = ms.supports();
+        var ms = new mirrorStore(storeName);
+        var supports = ms.supports();
 
         (supports).should.be.Array();
         (supports.length).should.be.above(0);
     })
     it('should be able to read non-existing value as undefined', function(done) {
-        const ms = new mirrorStore(storeName);
+        var ms = new mirrorStore(storeName);
         ms.getItem('non-existing')
             .then(function(value) {
                 should(value).be.an.Undefined()
@@ -41,7 +41,7 @@ describe('mirrorstore-library', function () {
             }).then(undefined, done)
     })
     it('should be able to set a string value', function(done) {
-        const ms = new mirrorStore(storeName);
+        var ms = new mirrorStore(storeName);
         ms.setItem(keyString, valueString)
             .then(function(value) {
                 should(value).be.exactly(true)
@@ -54,7 +54,7 @@ describe('mirrorstore-library', function () {
             }).then(undefined, done)
     })
     it('should be able to retrieve a string value', function(done) {
-        const ms = new mirrorStore(storeName);
+        var ms = new mirrorStore(storeName);
         ms.setItem(keyString, valueString)
             .then(function(value) {
                 should(value).be.exactly(true)
@@ -72,7 +72,7 @@ describe('mirrorstore-library', function () {
             }).then(undefined, done)
     })
     it('should be able to set a numeric value', function(done) {
-        const ms = new mirrorStore(storeName);
+        var ms = new mirrorStore(storeName);
         ms.setItem(keyNum, valueNum)
             .then(function(value) {
                 should(value).be.exactly(true)
@@ -85,7 +85,7 @@ describe('mirrorstore-library', function () {
             }).then(undefined, done)
     })
     it('should be able to retrieve a numeric value', function(done) {
-        const ms = new mirrorStore(storeName);
+        var ms = new mirrorStore(storeName);
         ms.setItem(keyNum, valueNum)
             .then(function(value) {
                 should(value).be.exactly(true)
@@ -103,7 +103,7 @@ describe('mirrorstore-library', function () {
             }).then(undefined, done)
     })
     it('should be able to set a boolean value', function(done) {
-        const ms = new mirrorStore(storeName);
+        var ms = new mirrorStore(storeName);
         ms.setItem(keyBool, valueBool)
             .then(function(value) {
                 should(value).be.exactly(true)
@@ -116,7 +116,7 @@ describe('mirrorstore-library', function () {
             }).then(undefined, done)
     })
     it('should be able to retrieve a boolean value', function(done) {
-        const ms = new mirrorStore(storeName);
+        var ms = new mirrorStore(storeName);
         ms.setItem(keyBool, valueBool)
             .then(function(value) {
                 should(value).be.exactly(true)
@@ -134,7 +134,7 @@ describe('mirrorstore-library', function () {
             }).then(undefined, done)
     })
     it('should be able to set an array value', function(done) {
-        const ms = new mirrorStore(storeName);
+        var ms = new mirrorStore(storeName);
         ms.setItem(keyArray, valueArray)
             .then(function(value) {
                 should(value).be.exactly(true)
@@ -147,7 +147,7 @@ describe('mirrorstore-library', function () {
             }).then(undefined, done)
     })
     it('should be able to retrieve an array value', function(done) {
-        const ms = new mirrorStore(storeName);
+        var ms = new mirrorStore(storeName);
         ms.setItem(keyArray, valueArray)
             .then(function(value) {
                 should(value).be.exactly(true)
@@ -165,7 +165,7 @@ describe('mirrorstore-library', function () {
             }).then(undefined, done)
     })
     it('should be able to set an object value', function(done) {
-        const ms = new mirrorStore(storeName);
+        var ms = new mirrorStore(storeName);
         ms.setItem(keyObj, valueObj)
             .then(function(value) {
                 should(value).be.exactly(true)
@@ -178,7 +178,7 @@ describe('mirrorstore-library', function () {
             }).then(undefined, done)
     })
     it('should be able to retrieve an object value', function(done) {
-        const ms = new mirrorStore(storeName);
+        var ms = new mirrorStore(storeName);
         ms.setItem(keyObj, valueObj)
             .then(function(value) {
                 should(value).be.exactly(true)
@@ -196,7 +196,7 @@ describe('mirrorstore-library', function () {
             }).then(undefined, done)
     })
     it('should be able to remove a value', function(done) {
-        const ms = new mirrorStore(storeName);
+        var ms = new mirrorStore(storeName);
         ms.setItem(keyObj, valueObj)
             .then(function(value) {
                 should(value).be.exactly(true)
@@ -219,7 +219,7 @@ describe('mirrorstore-library', function () {
             }).then(undefined, done)
     })
     it('should be able to retrieve stored keys', function(done) {
-        const ms = new mirrorStore(storeName);
+        var ms = new mirrorStore(storeName);
         ms.setItem(keyString, valueString)
             .then(function() {
                 return ms.setItem(keyNum, valueNum)
