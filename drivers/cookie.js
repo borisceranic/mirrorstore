@@ -1,3 +1,4 @@
+const Promise = require('rsvp').Promise
 const merge = require('lodash.merge')
 const cookies = require('cookies-js')
 

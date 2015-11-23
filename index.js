@@ -1,3 +1,4 @@
+const Promise = require('rsvp').Promise
 const uniq = require('lodash.uniq')
 
 const drivers = [
