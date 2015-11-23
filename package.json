@@ -1,0 +1,44 @@
+{
+  "name": "mirrorstore",
+  "version": "1.0.0",
+  "description": "Mirror stored data across available storage mechanisms",
+  "keywords": [
+    "key-value",
+    "storage",
+    "browser",
+    "localforage",
+    "localstorage",
+    "cookies",
+    "indexeddb",
+    "websql"
+  ],
+  "main": "index.js",
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Boris Ceranic",
+    "email": "me@sosko.in.rs",
+    "url": "https://sosko.in.rs/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/borisceranic/mirrorstore.git"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-mocha-phantomjs": "^0.10.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "mocha": "^2.3.3",
+    "should": "^7.1.1"
+  },
+  "dependencies": {
+    "cookies-js": "^1.2.2",
+    "localforage": "^1.3.0",
+    "lodash.merge": "^3.3.2",
+    "lodash.uniq": "^3.2.2"
+  }
+}
