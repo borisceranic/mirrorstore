@@ -22,7 +22,7 @@ Adapter.prototype._resolver = function(promise, fulfillWith) {
 
             return value
         })
-        .catch(function(err) {
+        .then(undefined, function(err) {
             return new Error(err)
         })
 }

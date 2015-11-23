@@ -38,7 +38,7 @@ describe('mirrorstore-library', function () {
             })
             .then(function() {
                 done()
-            }).catch(done)
+            }).then(undefined, done)
     })
     it('should be able to set a string value', function(done) {
         const ms = new mirrorStore(storeName);
@@ -51,7 +51,7 @@ describe('mirrorstore-library', function () {
             })
             .then(function() {
                 done()
-            }).catch(done)
+            }).then(undefined, done)
     })
     it('should be able to retrieve a string value', function(done) {
         const ms = new mirrorStore(storeName);
@@ -69,7 +69,7 @@ describe('mirrorstore-library', function () {
             })
             .then(function() {
                 done()
-            }).catch(done)
+            }).then(undefined, done)
     })
     it('should be able to set a numeric value', function(done) {
         const ms = new mirrorStore(storeName);
@@ -82,7 +82,7 @@ describe('mirrorstore-library', function () {
             })
             .then(function() {
                 done()
-            }).catch(done)
+            }).then(undefined, done)
     })
     it('should be able to retrieve a numeric value', function(done) {
         const ms = new mirrorStore(storeName);
@@ -100,7 +100,7 @@ describe('mirrorstore-library', function () {
             })
             .then(function() {
                 done()
-            }).catch(done)
+            }).then(undefined, done)
     })
     it('should be able to set a boolean value', function(done) {
         const ms = new mirrorStore(storeName);
@@ -113,7 +113,7 @@ describe('mirrorstore-library', function () {
             })
             .then(function() {
                 done()
-            }).catch(done)
+            }).then(undefined, done)
     })
     it('should be able to retrieve a boolean value', function(done) {
         const ms = new mirrorStore(storeName);
@@ -131,7 +131,7 @@ describe('mirrorstore-library', function () {
             })
             .then(function() {
                 done()
-            }).catch(done)
+            }).then(undefined, done)
     })
     it('should be able to set an array value', function(done) {
         const ms = new mirrorStore(storeName);
@@ -144,7 +144,7 @@ describe('mirrorstore-library', function () {
             })
             .then(function() {
                 done()
-            }).catch(done)
+            }).then(undefined, done)
     })
     it('should be able to retrieve an array value', function(done) {
         const ms = new mirrorStore(storeName);
@@ -162,7 +162,7 @@ describe('mirrorstore-library', function () {
             })
             .then(function() {
                 done()
-            }).catch(done)
+            }).then(undefined, done)
     })
     it('should be able to set an object value', function(done) {
         const ms = new mirrorStore(storeName);
@@ -175,7 +175,7 @@ describe('mirrorstore-library', function () {
             })
             .then(function() {
                 done()
-            }).catch(done)
+            }).then(undefined, done)
     })
     it('should be able to retrieve an object value', function(done) {
         const ms = new mirrorStore(storeName);
@@ -193,7 +193,7 @@ describe('mirrorstore-library', function () {
             })
             .then(function() {
                 done()
-            }).catch(done)
+            }).then(undefined, done)
     })
     it('should be able to remove a value', function(done) {
         const ms = new mirrorStore(storeName);
@@ -216,7 +216,7 @@ describe('mirrorstore-library', function () {
             })
             .then(function() {
                 done()
-            }).catch(done)
+            }).then(undefined, done)
     })
     it('should be able to retrieve stored keys', function(done) {
         const ms = new mirrorStore(storeName);
@@ -251,6 +251,6 @@ describe('mirrorstore-library', function () {
             })
             .then(function() {
                 done()
-            }).catch(done)
+            }).then(undefined, done)
     })
 })

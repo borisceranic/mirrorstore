@@ -30,14 +30,14 @@ function testDriver(driverInstance) {
                 })
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
 
         after(function(done) {
             driverInstance.removeItem(keyString)
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
     })
     describe('removeItem()', function() {
@@ -60,7 +60,7 @@ function testDriver(driverInstance) {
                 .then(function() {
                     done()
                 })
-                .catch(done)
+                .then(undefined, done)
         })
     })
     describe('String type', function() {
@@ -68,7 +68,7 @@ function testDriver(driverInstance) {
             driverInstance.removeItem(keyString)
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
         it('should be able to store a string', function (done) {
             driverInstance
@@ -78,7 +78,7 @@ function testDriver(driverInstance) {
                 })
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
         it('should be able to retrieve stored string', function (done) {
             driverInstance
@@ -93,7 +93,7 @@ function testDriver(driverInstance) {
                 .then(function() {
                     done()
                 })
-                .catch(done)
+                .then(undefined, done)
         })
     })
     describe('Number type', function() {
@@ -101,7 +101,7 @@ function testDriver(driverInstance) {
             driverInstance.removeItem(keyNum)
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
         it('should be able to store a number', function (done) {
             driverInstance
@@ -111,7 +111,7 @@ function testDriver(driverInstance) {
                 })
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
         it('should be able to retrieve stored number', function (done) {
             driverInstance
@@ -125,7 +125,7 @@ function testDriver(driverInstance) {
                 })
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
     })
     describe('Boolean type', function() {
@@ -133,7 +133,7 @@ function testDriver(driverInstance) {
             driverInstance.removeItem(keyBool)
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
         it('should be able to store a boolean', function (done) {
             driverInstance
@@ -143,7 +143,7 @@ function testDriver(driverInstance) {
                 })
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
         it('should be able to retrieve stored boolean', function (done) {
             driverInstance
@@ -157,7 +157,7 @@ function testDriver(driverInstance) {
                 })
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
     })
     describe('Array type', function() {
@@ -165,7 +165,7 @@ function testDriver(driverInstance) {
             driverInstance.removeItem(keyArray)
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
         it('should be able to store an array', function (done) {
             driverInstance
@@ -175,7 +175,7 @@ function testDriver(driverInstance) {
                 })
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
         it('should be able to retrieve stored array', function (done) {
             driverInstance
@@ -189,7 +189,7 @@ function testDriver(driverInstance) {
                 })
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
     })
     describe('Object type', function() {
@@ -197,7 +197,7 @@ function testDriver(driverInstance) {
             driverInstance.removeItem(keyObj)
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
         it('should be able to store an object', function (done) {
             driverInstance
@@ -207,7 +207,7 @@ function testDriver(driverInstance) {
                 })
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
         it('should be able to retrieve stored object', function (done) {
             driverInstance
@@ -221,7 +221,7 @@ function testDriver(driverInstance) {
                 })
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
     })
 
@@ -237,7 +237,7 @@ function testDriver(driverInstance) {
                 })
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
         it('should be able to enumerate stored keys', function (done) {
             driverInstance.setItem(keyString, valueString)
@@ -256,7 +256,7 @@ function testDriver(driverInstance) {
                 })
                 .then(function() {
                     done()
-                }).catch(done)
+                }).then(undefined, done)
         })
     })
 }
