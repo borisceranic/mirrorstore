@@ -1,5 +1,7 @@
 # mirrorstore: Store data into multiple backends at once
 
+[![Build Status](https://travis-ci.org/borisceranic/mirrorstore.svg)](https://travis-ci.org/borisceranic/mirrorstore)
+
 This module allows storage and retrieval of values across multiple backend
 storage mechanisms at the same time.
 
