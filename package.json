@@ -1,6 +1,6 @@
 {
   "name": "mirrorstore",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Mirror stored data across available storage mechanisms",
   "keywords": [
     "key-value",
