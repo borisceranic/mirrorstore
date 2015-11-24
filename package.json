@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "cookies-js": "^1.2.2",
+    "json3": "^3.3.2",
     "localforage": "^1.3.0",
     "lodash.merge": "^3.3.2",
     "lodash.uniq": "^3.2.2",
