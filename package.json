@@ -41,6 +41,7 @@
     "localforage": "^1.3.0",
     "lodash.merge": "^3.3.2",
     "lodash.uniq": "^3.2.2",
+    "md5": "^2.0.0",
     "promise": "^7.0.4"
   }
 }

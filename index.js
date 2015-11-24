@@ -1,3 +1,5 @@
+var JSON = require('json3')
+var md5 = require('md5')
 var Promise = require('promise')
 var uniq = require('lodash.uniq')
 
@@ -61,7 +63,7 @@ mirrorStore.prototype._countUnique = function(original) {
 
     for (var i = 0, len = original.length; i < len; i++) {
         var keyVal = original[i]
-        var key = JSON.stringify(keyVal)
+        var key = md5(JSON.stringify(keyVal))
 
         if (typeof compressed[key] === 'undefined') {
             compressed[key] = {
