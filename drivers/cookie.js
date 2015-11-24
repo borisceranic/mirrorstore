@@ -1,7 +1,5 @@
 var Promise = require('promise')
-if (typeof JSON === 'undefined') {
-	var JSON = require('json3')
-}
+var JSON = require('json3')
 var merge = require('lodash.merge')
 var cookies = require('cookies-js')
 
